@@ -1,0 +1,24 @@
+module.exports = {
+    age: function (timestamp) {
+            const today = new Date();
+            const birth = new Date(timestamp);
+        
+            let age = today.getUTCFullYear() - birth.getUTCFullYear();
+            const month = today.getUTCMonth() - birth.getUTCMonth();
+            const day = today.getUTCDate() - birth.getUTCDate();
+        
+            if(month < 0 || (month == 0 && day <= 0)) {
+                age = age - 1;
+            }
+        
+            return age;
+        },
+    date: function(timestamp) {
+        const date = new Date(timestamp);
+        const year = date.getUTCFullYear();
+        const month = `0${date.getUTCMonth() + 1}`.slice(-2);
+        const day = `0${date.getUTCDate()}`.slice(-2);
+
+        return `${year}-${month}-${day}`;
+    }
+};

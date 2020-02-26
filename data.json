@@ -6,7 +6,11 @@
       "avatar_url": "https://scontent.fgru16-1.fna.fbcdn.net/v/t1.0-9/p960x960/78137805_2249289121844149_2610958843131199488_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_ohc=SwKk7hoQ5GYAX9-NYL_&_nc_ht=scontent.fgru16-1.fna&_nc_tp=6&oh=4940998afc1e2c55380ee68709be2194&oe=5EF28DE3",
       "birth": 959817600000,
       "gender": "M",
-      "services": "Ginástica, Natação, Rugbi",
+      "services": [
+        "Ginástica",
+        " Natação",
+        " Rugbi"
+      ],
       "created_at": 1582651270735
     },
     {
@@ -15,7 +19,10 @@
       "avatar_url": "https://images.unsplash.com/flagged/photo-1566064352554-f36ef0ef23b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "birth": 612057600000,
       "gender": "F",
-      "services": "Crossfit, Natação",
+      "services": [
+        "Crossfit",
+        " Natação"
+      ],
       "created_at": 1582656332526
     },
     {
@@ -24,7 +31,10 @@
       "avatar_url": "https://images.unsplash.com/flagged/photo-1566063698649-9df11f39ba51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "birth": 893721600000,
       "gender": "M",
-      "services": "Crossfit, Natação",
+      "services": [
+        "Crossfit",
+        " Natação"
+      ],
       "created_at": 1582656345910
     },
     {
@@ -33,17 +43,11 @@
       "avatar_url": "https://images.unsplash.com/photo-1517344368193-41552b6ad3f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "birth": 712713600000,
       "gender": "M",
-      "services": "Ginástica, Tênis",
+      "services": [
+        "Ginástica",
+        " Tênis"
+      ],
       "created_at": 1582656370781
-    },
-    {
-      "id": 5,
-      "name": "Renata Lopes",
-      "avatar_url": "https://images.unsplash.com/photo-1546817372-628669db4655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
-      "birth": 702691200000,
-      "gender": "F",
-      "services": "Pilates",
-      "created_at": 1582656390975
     }
   ]
 }

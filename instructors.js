@@ -120,7 +120,7 @@ exports.put = function(req, res) {
 //delete
 exports.delete = function(req, res) {
     const { id } = req.body;
-
+    console.log(id);
     const filteredInstructors = data.instructors.filter(function(instructor) {
         return instructor.id != id;
     });

@@ -91,5 +91,36 @@ module.exports = {
 
             callback();
         })
+    },
+    paginate(params) {
+        const { filter, limit, offset, callback } = params;
+
+        let query = "",
+            filterQuery = "",
+            totalQuery = `(SELECT COUNT(*) FROM instructors) AS total`
+
+        if(filter) {
+            filterQuery = `${query}
+            WHERE instructors.name ILIKE '%${filter}%' or instructors.services ILIKE '%${filter}%'`
+
+            totalQuery = `(
+                SELECT COUNT(*) FROM instructors
+                ${filterQuery}
+            ) AS total`
+        }
+
+        query = `SELECT instructors.*, ${totalQuery}, COUNT(members) as total_students FROM instructors
+        LEFT JOIN members ON instructors.id = members.instructor_id
+        ${filterQuery}
+        GROUP BY instructors.id LIMIT $1 OFFSET $2`;
+        
+
+        db.query(query, [limit, offset], function(err, results) {
+            if(err){
+                console.log(query) 
+                throw `Database error! ${err}`;}
+
+            callback(results.rows);
+        });
     }
 }
